@@ -3,7 +3,11 @@ from langchain_ollama import ChatOllama
 from typing import TypedDict
 
 # 1. Define the model (Ollama must be running locally)
-llm = ChatOllama(model="mistral")
+llm = ChatOllama(
+    model="mistral",
+    temperature=0,
+    verbose=True,
+)
 
 # 2. Define the node behavior
 def generate_response(state):
